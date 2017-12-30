@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String newResultSTr = handler.callApi();
-                String price2 = "New price of RaiBlocks: " + newResultSTr;
+                String price2 =  newResultSTr;
                 textView.setText(price2); //set the text after clicking button
             }
         });
