@@ -3,6 +3,15 @@ package com.harbinger.raiwatch;
 import android.app.DownloadManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
+import android.graphics.Color;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import java.io.*;
 
@@ -42,6 +51,22 @@ public class MainActivity extends AppCompatActivity {
         String resultSTr = result.toString();
 
 
+
+
+        String price = "Current price of RaiBlocks: " + resultSTr;
+        final String price2 = "New price of RaiBlocks: " + resultSTr;
+
+
+        final TextView textView = (TextView)findViewById(R.id.textView);
+        textView.setText(price);
+
+        Button changeText = (Button) findViewById(R.id.btnChangeText); //get the id for button
+        changeText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textView.setText(price2); //set the text after clicking button
+            }
+        });
 
     }
 
