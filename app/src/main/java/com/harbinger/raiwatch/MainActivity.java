@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        HttpURLConnection urlConnection;
+        HttpURLConnection urlConnection = null;
 
         StringBuilder result = new StringBuilder();
 
@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         try {
             URL url = new URL("https://api.coinmarketcap.com/v1/ticker/raiblocks/");
             urlConnection = (HttpURLConnection) url.openConnection();
+            urlConnection.setRequestMethod("GET");
+            urlConnection.connect();
             InputStream in = new BufferedInputStream(urlConnection.getInputStream());
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(in));
@@ -45,7 +47,10 @@ public class MainActivity extends AppCompatActivity {
 
         } catch (Exception e){
             e.printStackTrace();
+        } finally {
+            urlConnection.disconnect();
         }
+
 
         String resultSTr = result.toString();
 
