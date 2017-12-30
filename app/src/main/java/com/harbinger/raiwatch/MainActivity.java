@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         changeText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 textView.setText(price2); //set the text after clicking button
             }
         });
