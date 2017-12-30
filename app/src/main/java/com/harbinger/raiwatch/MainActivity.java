@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             String line;
             while ((line = reader.readLine()) != null) {
                 result.append(line);
+                System.out.println(line);
             }
 
         } catch (Exception e){
