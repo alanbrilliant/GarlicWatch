@@ -26,38 +26,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        HttpURLConnection urlConnection = null;
-
-        StringBuilder result = new StringBuilder();
 
 
-        try {
-            URL url = new URL("https://api.coinmarketcap.com/v1/ticker/raiblocks/");
-            urlConnection = (HttpURLConnection) url.openConnection();
-            urlConnection.setRequestMethod("GET");
-            urlConnection.connect();
-            InputStream in = new BufferedInputStream(urlConnection.getInputStream());
-
-            BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-
-            String line;
-            while ((line = reader.readLine()) != null) {
-                result.append(line);
-                System.out.println(line);
-            }
-
-        } catch (Exception e){
-            e.printStackTrace();
-        } finally {
-            urlConnection.disconnect();
-        }
-
-
-        String resultSTr = result.toString();
-
-
-
-
+        HttpHandler handler = new HttpHandler("https://api.coinmarketcap.com/v1/ticker/raiblocks/");
+        String resultSTr = handler.callApi();
         final String price = resultSTr;
         final String price2 = "New price of RaiBlocks: " + resultSTr;
 
