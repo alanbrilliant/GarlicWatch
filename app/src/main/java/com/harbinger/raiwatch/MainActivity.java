@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        HttpHandler handler = new HttpHandler("https://api.coinmarketcap.com/v1/ticker/raiblocks/");
-        String resultSTr = handler.callApi();
+        final HttpHandler handler = new HttpHandler("https://api.coinmarketcap.com/v1/ticker/raiblocks/");
+         String resultSTr = handler.callApi();
         final String price = resultSTr;
-        final String price2 = "New price of RaiBlocks: " + resultSTr;
+
 
 
         final TextView textView = (TextView)findViewById(R.id.textView);
@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
         changeText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                String newResultSTr = handler.callApi();
+                String price2 = "New price of RaiBlocks: " + newResultSTr;
                 textView.setText(price2); //set the text after clicking button
             }
         });
