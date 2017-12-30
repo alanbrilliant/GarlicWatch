@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        final String price = "Current price of RaiBlocks: " + resultSTr;
+        final String price = resultSTr;
         final String price2 = "New price of RaiBlocks: " + resultSTr;
 
 
