@@ -87,8 +87,10 @@ public class HttpHandler  {
             t++;
         }
 
-      B  t++;
+        t++;
        resultSTr =data.get(t);
+
+       resultSTr = "$"+resultSTr.substring(1,resultSTr.length()-2);
         return resultSTr;
     }
 }

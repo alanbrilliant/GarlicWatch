@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         HttpHandler handler = new HttpHandler("https://api.coinmarketcap.com/v1/ticker/raiblocks/");
         String resultSTr = handler.callApi();
         final String price = resultSTr;
-        final String price2 = "New price of RaiBlocks: " + resultSTr;
+        final String price2 = resultSTr;
 
 
         final TextView textView = (TextView)findViewById(R.id.textView);
