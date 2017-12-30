@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
             while ((line = reader.readLine()) != null) {
                 result.append(line);
             }
-            urlConnection.disconnect();
 
         } catch (Exception e){
             e.printStackTrace();
