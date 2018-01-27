@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RaiWatch.iml" filepath="$PROJECT_DIR$/RaiWatch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GarlicWatch.iml" filepath="$PROJECT_DIR$/GarlicWatch.iml" />
+      <module fileurl="file://Q:\Documents\Git-Unity-Saves\GarlicWatch\RaiWatch.iml" filepath="Q:\Documents\Git-Unity-Saves\GarlicWatch\RaiWatch.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://Q:\Documents\Git-Unity-Saves\GarlicWatch\app\app.iml" filepath="Q:\Documents\Git-Unity-Saves\GarlicWatch\app\app.iml" />
     </modules>
   </component>
 </project>

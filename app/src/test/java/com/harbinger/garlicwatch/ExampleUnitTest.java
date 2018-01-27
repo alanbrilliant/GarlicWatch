@@ -1,4 +1,4 @@
-package com.harbinger.raiwatch;
+package com.harbinger.garlicwatch;
 
 import org.junit.Test;
 

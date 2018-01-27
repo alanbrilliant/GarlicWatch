@@ -1,37 +1,17 @@
-package com.harbinger.raiwatch;
+package com.harbinger.garlicwatch;
 
 import android.os.StrictMode;
-import android.util.Log;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
 import java.net.URL;
 
 
-import android.app.DownloadManager;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.TextView;
-import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-
-import java.io.*;
 import java.util.Arrays;
 import java.util.List;
-
-import org.json.JSONObject;
 
 public class HttpHandler  {
     private static final String TAG = HttpHandler.class.getSimpleName();

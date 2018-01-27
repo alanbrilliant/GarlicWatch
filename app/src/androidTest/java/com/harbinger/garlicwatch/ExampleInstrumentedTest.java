@@ -1,4 +1,4 @@
-package com.harbinger.raiwatch;
+package com.harbinger.garlicwatch;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
